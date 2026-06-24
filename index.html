@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gerry the Pirate Cat — Setting Sail Soon! 🏴‍☠️</title>
+<meta name="description" content="A whole world of islands, games and treasure is almost ready. Join the crew and be first aboard when Gerry the One-Eyed Pirate Cat sets sail!" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- Gerry, the cursor-following first mate -->
+<div id="mascot" aria-hidden="true">
+  <div class="mascot__bubble" id="mascotBubble"></div>
+  <img class="mascot__img" src="assets/gerry-mascot.png" alt="" draggable="false" />
+</div>
+
+<main>
+
+  <!-- ============ hero (with sign-up) ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__art" style="background-image:url('assets/hero-ship.png')"></div>
+    <div class="hero__scrim"></div>
+
+    <div class="gulls" aria-hidden="true">
+      <svg class="gull gull--1" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 11 Q29 2 38 12" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg class="gull gull--2" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 11 Q29 2 38 12" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <svg class="gull gull--3" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 11 Q29 2 38 12" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__left">
+        <p class="eyebrow">⚓ Book One · Coming Soon</p>
+        <h1 class="hero__title">Set sail soon with<br><span class="gold-ink">Gerry the Pirate Cat</span></h1>
+        <p class="hero__sub">A whole world of islands, games and treasure is <strong>almost ready</strong>.</p>
+
+        <div class="hero-signup">
+          <p class="hero-signup__label">🦜 Be first aboard — join the crew!</p>
+          <form class="signup" id="signupHero" novalidate>
+            <label class="sr-only" for="emailHero">Your email</label>
+            <input class="signup__input" id="emailHero" name="email" type="email" inputmode="email"
+                   placeholder="grown-up's email…" autocomplete="email" required />
+            <button class="btn btn--gold btn--lg" type="submit">I'm interested! 🏴‍☠️</button>
+            <p class="signup__msg" id="msgHero" role="status" aria-live="polite"></p>
+          </form>
+          <p class="hero-signup__note">No spam — just one shout the day we set sail. 🏴‍☠️</p>
+        </div>
+      </div>
+
+      <aside class="hero-stats">
+        <div class="hero-stats__count">
+          <span class="coin">🪙</span>
+          <span class="big-count" id="countNum">…</span>
+          <span class="hero-stats__label" id="countLabel">future pirates aboard!</span>
+        </div>
+        <div class="hero-stats__cd">
+          <p class="hero-stats__cdlabel">⏳ Setting sail in…</p>
+          <div class="countdown" id="countdown" role="timer" aria-label="Time until launch">
+            <div class="cd-unit"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hrs</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Min</span></div>
+            <div class="cd-unit"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Sec</span></div>
+          </div>
+          <p class="hero-stats__date">🗓️ Launching December 1st, 2026</p>
+        </div>
+      </aside>
+    </div>
+
+    <a href="#what" class="scroll-hint" aria-label="Scroll down">⌄</a>
+  </section>
+
+  <!-- ============ what's coming ============ -->
+  <section class="what" id="what">
+    <div class="wrap">
+      <h2 class="section-title center reveal">What's coming aboard? 🧭</h2>
+      <p class="section-sub center reveal">Every chapter is a story <em>and</em> a playground. Here's a taste of the adventure.</p>
+
+      <div class="pillars">
+        <article class="pillar reveal" style="--c:#e8472b"><div class="pillar__icon">📖</div><h3>Read</h3><p>Illustrated read-along chapters you can follow word by word.</p></article>
+        <article class="pillar reveal" style="--c:#f5a623"><div class="pillar__icon">🎮</div><h3>Play</h3><p>A fun, friendly game waiting at the end of every chapter.</p></article>
+        <article class="pillar reveal" style="--c:#2bb3a3"><div class="pillar__icon">🗺️</div><h3>Explore</h3><p>A clickable world of 11 islands to discover and learn about.</p></article>
+        <article class="pillar reveal" style="--c:#5b6fd6"><div class="pillar__icon">🎨</div><h3>Create</h3><p>Enter contests, build your own scenes and add your pet!</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ games intro ============ -->
+  <section class="games-intro">
+    <div class="wrap center">
+      <h2 class="section-title center reveal">What every chapter gives you 🎮</h2>
+      <p class="section-sub center reveal">A story to read, a game to play, and keepsakes to treasure. Here's a taste of each — with a real sample you can try, right now.</p>
+    </div>
+  </section>
+
+  <!-- ============ GAME 1 · build the scene ============ -->
+  <section class="game" id="game-build">
+    <div class="wrap game-wrap">
+      <div class="game-info reveal">
+        <span class="game-badge">📖 Read &amp; Create</span>
+        <h3 class="game-title">Read along, then build the scene</h3>
+        <p class="game-text">Every chapter is an illustrated <strong>read-along story</strong>. When the reading's done, your child drags the crew right into the picture — practising reading, clicking and dragging all at once.</p>
+        <ul class="game-points">
+          <li>📖 Illustrated read-along chapters</li>
+          <li>🖐️ Drag the crew into the story</li>
+        </ul>
+        <p class="game-book"><span class="game-book__tag">🎁 FREE with your subscription</span> Every month, the scenes your child builds become their <strong>very own customised storybook</strong> — professionally printed and posted to your door. A real keepsake they made themselves, included free!</p>
+        <p class="game-try">👉 Have a go — drag Gerry to the wheel!</p>
+      </div>
+      <div class="game-panel reveal">
+        <div class="build-stage" id="buildStage">
+          <img src="assets/ship-empty.png" alt="The pirate ship Sunshine, ready for you to add the crew" />
+          <div class="drop-target" id="dropTarget"><span>drop<br>Gerry!</span></div>
+          <img class="drag-chip" id="dragChip" src="assets/gerry-mascot.png" alt="Drag Gerry onto the ship" draggable="false" />
+          <div class="placed-badge" id="placedBadge">placed! 🎉</div>
+        </div>
+        <div class="game-foot">
+          <p class="game-status" id="buildStatus">👆 Grab Gerry and drop him on the dashed square.</p>
+          <button class="btn btn--ghost btn--sm" id="buildReset" type="button">↺ Start again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GAME 2 · treasure maze ============ -->
+  <section class="game game--dark" id="game-maze">
+    <div class="wrap game-wrap">
+      <div class="game-info reveal">
+        <span class="game-badge">🎮 Play &amp; Explore</span>
+        <h3 class="game-title">A fun game at the end of every chapter</h3>
+        <p class="game-text">Each chapter finishes with a <strong>simple, friendly game</strong> — mazes, quizzes, hidden-object hunts and word puzzles — gentle enough for the smallest pirates.</p>
+        <ul class="game-points">
+          <li>🧩 A brand-new mini-game in every chapter</li>
+          <li>🗺️ 11 clickable islands to explore</li>
+          <li>🧭 Learn geography, animals &amp; weather as you go</li>
+        </ul>
+        <p class="game-try">👉 Try it — guide Gerry to the treasure!</p>
+      </div>
+      <div class="game-panel reveal">
+        <div class="maze" id="mazeGrid" tabindex="0" aria-label="Treasure maze"></div>
+        <div class="dpad" id="dpad" aria-label="Move Gerry">
+          <button class="dpad__btn dpad__up"    data-dir="up"    type="button" aria-label="Up">▲</button>
+          <button class="dpad__btn dpad__left"  data-dir="left"  type="button" aria-label="Left">◀</button>
+          <button class="dpad__btn dpad__down"  data-dir="down"  type="button" aria-label="Down">▼</button>
+          <button class="dpad__btn dpad__right" data-dir="right" type="button" aria-label="Right">▶</button>
+        </div>
+        <div class="game-foot">
+          <p class="game-status" id="mazeStatus">Tip: tap the maze first, then use your arrow keys.</p>
+          <button class="btn btn--ghost btn--sm" id="mazeReset" type="button">↺ Start again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GAME 3 · memory match ============ -->
+  <section class="game game--teal" id="game-match">
+    <div class="wrap game-wrap">
+      <div class="game-info reveal">
+        <span class="game-badge">🏆 Learn &amp; Win</span>
+        <h3 class="game-title">Learning that feels like playing</h3>
+        <p class="game-text">Matching, memory and word games quietly build <strong>reading and thinking skills</strong> — and there's a whole crew community to join, too.</p>
+        <ul class="game-points">
+          <li>🧠 Builds reading, memory &amp; matching</li>
+          <li>🎨 Enter contests &amp; add your own pet</li>
+          <li>🌟 Get featured in the winners' gallery</li>
+        </ul>
+        <p class="game-try">👉 Try it — find all the matching pairs!</p>
+      </div>
+      <div class="game-panel reveal">
+        <div class="match-grid" id="matchGrid" aria-label="Memory match game"></div>
+        <div class="game-foot">
+          <p class="game-status" id="matchStatus">Flips: <strong>0</strong> · Pairs found: <strong>0</strong>/4</p>
+          <button class="btn btn--ghost btn--sm" id="matchReset" type="button">↺ Shuffle &amp; restart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ sneak peek (art) ============ -->
+  <section class="peek" id="peek">
+    <div class="wrap">
+      <h2 class="section-title center reveal">Sneak a peek 👀</h2>
+      <p class="section-sub center reveal">A few treasures from inside the world — still being polished!</p>
+
+      <div class="peek-grid">
+        <figure class="peek-card peek-card--tilt reveal">
+          <div class="peek-card__img"><img src="assets/world-map.png" alt="Illustrated map of The Bagoodahs islands" loading="lazy" /></div>
+          <figcaption><strong>Explore the Bagoodahs</strong> — sail between 11 islands and uncover each one's secrets.</figcaption>
+        </figure>
+        <figure class="peek-card peek-card--tilt reveal">
+          <div class="peek-card__img"><img src="assets/turtle-island.png" alt="Turtle Island, a cosy dock town on a giant turtle" loading="lazy" /></div>
+          <figcaption><strong>Visit Turtle Island</strong> — learn about geography, animals and weather as you explore.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ meet the crew ============ -->
+  <section class="crew" id="crew">
+    <div class="wrap">
+      <h2 class="section-title center reveal">Meet the crew ⚓</h2>
+      <p class="section-sub center reveal">The brave cats of the <em>Sunshine</em>… and one sneaky dog.</p>
+
+      <div class="crew-grid">
+        <article class="char reveal" style="--c:#e8472b">
+          <div class="char__portrait"><img src="assets/crew/gerry.png" alt="Gerry the one-eyed tabby pirate cat" loading="lazy" /></div>
+          <h3>Gerry</h3>
+          <span class="char__breed">Tabby cat · Captain</span>
+          <p>The brave one-eyed captain of the <em>Sunshine</em> — nautical, kind and full of heart.</p>
+          <ul class="char__traits"><li>Brave</li><li>Kind-hearted</li><li>Born leader</li></ul>
+        </article>
+
+        <article class="char reveal" style="--c:#2bb3a3">
+          <div class="char__portrait"><img src="assets/crew/ryley.png" alt="Ryley the Maine Coon cat" loading="lazy" /></div>
+          <h3>Ryley</h3>
+          <span class="char__breed">Maine Coon</span>
+          <p>The crew's gentle giant — big, slow and easy-going, but strong and confident when it counts.</p>
+          <ul class="char__traits"><li>Friendly &amp; gentle</li><li>Strong</li><li>Easy-going</li><li>Playful</li><li>Loving</li></ul>
+        </article>
+
+        <article class="char reveal" style="--c:#f5a623">
+          <div class="char__portrait"><img src="assets/crew/megan.png" alt="Megan the Russian Blue cat in an apron" loading="lazy" /></div>
+          <h3>Megan</h3>
+          <span class="char__breed">Russian Blue</span>
+          <p>Clever, curious and a touch shy — always has a plan, and a lot to say about it.</p>
+          <ul class="char__traits"><li>Very intelligent</li><li>Curious</li><li>Loves to talk</li><li>Affectionate</li><li>Shy but protective</li></ul>
+        </article>
+
+        <article class="char reveal" style="--c:#5b6fd6">
+          <div class="char__portrait"><img src="assets/crew/claire.png" alt="Claire the Siamese cat in a blue bandana and red skirt" loading="lazy" /></div>
+          <h3>Claire</h3>
+          <span class="char__breed">Siamese</span>
+          <p>Megan's sharp-witted sister — the quickest tongue aboard, and never shy of a good complaint.</p>
+          <ul class="char__traits"><li>Very clever</li><li>Vocal</li><li>Affectionate</li><li>Territorial</li><li>Playful</li></ul>
+        </article>
+
+        <article class="char reveal" style="--c:#7a5c3e">
+          <div class="char__portrait"><img src="assets/crew/bowwow.png" alt="Bow Wow Wow Bones the Mini Schnauzer dog pirate" loading="lazy" /></div>
+          <h3>Bow Wow Wow Bones</h3>
+          <span class="char__breed">Mini Schnauzer</span>
+          <p>The sneaky dog-pirate captain scheming to become… Cat King! 😼</p>
+          <ul class="char__traits"><li class="char__bad">😼 The bad guy</li><li>Sneaky</li><li>Scheming</li><li>Sword-swinger</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ final CTA ============ -->
+  <section class="final-cta" id="finalCta">
+    <div class="wrap">
+      <div class="final-cta__inner reveal">
+        <h2>Don't miss the launch! ⛵</h2>
+        <p>Join the crew now and you'll be first to know when <strong>Gerry the Pirate Cat</strong> sets sail.</p>
+
+        <form class="signup signup--invert" id="signupFinal" novalidate>
+          <label class="sr-only" for="emailFinal">Your email</label>
+          <input class="signup__input" id="emailFinal" name="email" type="email" inputmode="email"
+                 placeholder="grown-up's email…" autocomplete="email" required />
+          <button class="btn btn--gold btn--lg" type="submit">I'm interested! 🏴‍☠️</button>
+          <p class="signup__msg" id="msgFinal" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="final-cta__count">
+          <span class="coin">🪙</span>
+          <strong id="countNum2">…</strong> future pirates aboard · setting sail <strong>Dec 1, 2026</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="emblem emblem--sm" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <g stroke="#fff" stroke-width="5" stroke-linecap="round"><line x1="17" y1="46" x2="47" y2="20" /><line x1="47" y1="46" x2="17" y2="20" /></g>
+          <g fill="#fff"><circle cx="17" cy="46" r="4" /><circle cx="47" cy="46" r="4" /><circle cx="17" cy="20" r="4" /><circle cx="47" cy="20" r="4" />
+            <path d="M22 20 L17 9 L29 17 Z" /><path d="M42 20 L47 9 L35 17 Z" />
+            <path d="M32 17 C40 17 45 23 45 31 C45 39 39 45 32 45 C25 45 19 39 19 31 C19 23 24 17 32 17 Z" /></g>
+          <g fill="#16263f"><ellipse cx="27" cy="30" rx="2.6" ry="3.4" /><ellipse cx="37" cy="30" rx="2.6" ry="3.4" /><path d="M32 35 l3 3 -6 0 Z" /></g>
+        </svg>
+      </span>
+      <span><strong>Gerry the One-Eyed Pirate Cat</strong><br>a Shermoffats Boing&nbsp;Boing adventure</span>
+    </div>
+    <p class="footer-note">🚧 This is a pre-launch sneak peek — story &amp; artwork are still works in progress. © 2026. All aboard soon!</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
